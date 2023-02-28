@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,10 +8,14 @@
     <title>Добро пожаловать</title>
     {% endif %}
 </head>
-<body>
+<body> -->
+{% extends "base.html" %}
+{% block content%}
     <h1>Hello, {{user.nickname}}</h1>
-    {% for post in posts %}
-    <p>{{post.author.nickname}} пишет: <b>{{post.body}}</b></p>
-    {% endfor %}
-</body>
-</html>
+{% for post in posts %}
+    <div><p>{{post.author.nickname}} пишет: <b>{{post.body}}</b></p></div>
+{% endfor %}
+{% endblock %}
+
+<!-- </body>
+</html> -->
